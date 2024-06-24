@@ -19,14 +19,13 @@
 - Developed a responsive hero section by leveraging the `l-canvas` class for layout and implementing CSS grid and responsive design tweaks for adherence to the design file.
 - Used `<picture>` and `<source>` for optimized images across devices.
 
-<!-- ### Project Setup -->
+### Project Setup
+
+- Initialized the project on [GitHub](https://github.com/nicholasgillespie/art-gallery).
+- Deployed the project to [GitHub Pages](https://nicholasgillespie.github.io/art-gallery/).
 
 #### TODO
 
-- Initialize the project on GitHub.
-<!-- - Initialized the project on [GitHub](https://github.com/nicholasgillespie/body-mass). -->
-- Deploy the project to GitHub.
-<!-- - Deployed the project to [GitHub Pages](https://nicholasgillespie.github.io/body-mass/). -->
 - Define project design tokens.
   <!-- - Defined the project [design tokens](https://github.com/nicholasgillespie/body-mass/tree/main/src/styles/00-settings). -->
 
