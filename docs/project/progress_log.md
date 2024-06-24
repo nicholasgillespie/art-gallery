@@ -28,6 +28,7 @@
 
 - Define project design tokens.
   <!-- - Defined the project [design tokens](https://github.com/nicholasgillespie/body-mass/tree/main/src/styles/00-settings). -->
+- Correct accessibility issue, redundant h1 element.
 
 ---
 
