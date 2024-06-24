@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import SectHero from "../components/SectHero.astro";
+const title = "Home"
+const description = "Explore the Modern Art Gallery, a sanctuary of inspiration and creativity. Discover our diverse collections, learn about the artists' creative processes, and find new insights. Open daily, free for all. Visit us at 99 King Street, Newport, USA."
+---
+
+<BaseLayout title={ title } description={ description}>
+  <SectHero />
+</BaseLayout>
+
+<style lang="scss">
+  @import '../styles/20-mixins/media-query.scss';
+</style>

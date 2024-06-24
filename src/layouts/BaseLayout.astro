@@ -1,0 +1,18 @@
+---
+import SiteHead from '../components/SiteHead.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+const { title } = Astro.props;
+const { description } = Astro.props;
+---
+
+<html lang="en">
+	<SiteHead title={title} description={description}></SiteHead>
+	<body>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+	</body>
+</html>

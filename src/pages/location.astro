@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import CompSkipLink from "../components/CompSkipLink.astro";
+const title = "Location"
+---
+
+<BaseLayout title={title}>
+  <section class="solutions | l-wrapper l-region" aria-labelledby="label_solutions">
+    <div class="solutions__content | l-flow l-center" data-center="child-elements">
+      <h1 id="label_solutions">Design solutions made easy</h1>
+      <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
+    </div>
+
+    <div class="solutions__disciplines" aria-labelledby="label_disciplines">
+      <h2 id="label_disciplines" class="u-vh">Design disciplines</h2>
+      <CompSkipLink targetId="about" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @import '../styles/20-mixins/media-query.scss';
+</style>

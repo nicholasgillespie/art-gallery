@@ -1,0 +1,43 @@
+$colors: (
+  "title": "Colors",
+  "description":
+    "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print.",
+  "items": (
+    (
+      "name": "Black",
+      "value": rgba(3, 3, 3, 1),
+    ),
+    (
+      "name": "Medium Brown",
+      "value": rgba(122, 116, 110, 1),
+    ),
+    (
+      "name": "Light Cream",
+      "value": rgba(255, 247, 240, 1),
+    ),
+    (
+      "name": "Galactic Blue",
+      "value": rgba(117, 92, 222, 1),
+    ),
+    (
+      "name": "Summer Yellow",
+      "value": rgba(246, 165, 96, 1),
+    ),
+    (
+      "name": "Pink",
+      "value": rgba(243, 158, 158, 1),
+    ),
+    (
+      "name": "Light Red",
+      "value": rgba(235, 117, 101, 1),
+    ),
+    (
+      "name": "Cyan",
+      "value": rgba(97, 196, 183, 1),
+    ),
+    (
+      "name": "Dark Purple",
+      "value": rgba(85, 32, 73, 1),
+    ),
+  ),
+);

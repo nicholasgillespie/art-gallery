@@ -1,0 +1,36 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5ch;
+  position: relative;
+  padding: var(--button-padding, 0.7em 2em);
+  cursor: pointer;
+  text-decoration: none;
+  border: var(--button-border, solid var(--border-width, medium) transparent);
+  border-radius: var(--button-radius, 2em);
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: var(--line-height-fine);
+  letter-spacing: inherit;
+  text-transform: capitalize;
+  background-color: var(--button-bg, var(--color-black));
+  color: var(--button-text, var(--color-light-cream));
+
+  &:hover,
+  &:focus-visible {
+    --button-bg: var(--color-galactic-blue);
+  }
+
+  /* Default variant is primary, so no additional styles needed for it */
+  /* VARIANTS */
+  &[data-button-variant="secondary"] {
+    --button-bg: var(--color-light-red);
+
+    &:hover,
+    &:focus-visible {
+      --button-bg: var(--color-summer-yellow);
+    }
+  }
+}

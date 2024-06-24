@@ -1,0 +1,178 @@
+---
+import CompButton from "./CompButton.astro";
+
+
+---
+
+<section class="hero | l-canvas">
+  <div class="hero__black"></div>
+  <div class="hero__image">
+    <picture>
+      <source
+        srcset="images/desktop/image-hero.jpg"
+        media="(min-width: 55.001rem)"
+        type="image/jpg"
+      />
+      <source
+        srcset="images/tablet/image-hero.jpg"
+        media="(min-width: 40.001rem) and (max-width: 55rem)"
+        type="image/jpg"
+      />
+      <source
+        srcset="images/mobile/image-hero.jpg"
+        media="(max-width: 40rem)"
+        type="image/jpg"
+      />
+      <img
+        src="images/desktop/image-hero.jpg"
+        alt="Two people walking and looking at a painting on a wall in an art gallery"
+        width="540"
+        height="800"
+        loading="eager"
+      />
+    </picture>
+  </div>
+  <div class="hero__white"></div>
+  <div class="hero__heading">
+    <h1>modern art gallery</h1>
+  </div>
+  <div class="hero__text | l-flow">
+    <h1>modern<br>art gallery</h1>
+    <p>The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.</p>
+    <CompButton href="location" text="our location" />
+  </div>
+</section>
+
+<style lang="scss">
+@import '../styles/20-mixins/media-query.scss';
+
+.hero {
+  grid-template-rows: 
+      [full-start black-start image-start white-start] 
+      1fr
+      [text-start] auto [text-end] 
+      2fr
+      [white-end image-end black-end full-end] auto; 
+
+  &__black {
+    background-color: black;
+    grid-row: black-start / black-end;
+    grid-column: full-width-start / span 2;
+    margin-inline-end: calc(var(--space-gutter) / 1);
+  }
+
+  &__image {
+    grid-row: image-start / image-end;
+    grid-column: 3 / 4;
+    margin-inline-start: calc(var(--space-gutter) / -1);
+    margin-inline-end: calc(var(--space-gutter) / -1);
+    
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__white {
+    background-color: white;
+    grid-row: white-start / white-end;
+    grid-column: span 2 / full-width-end;
+    margin-inline-start: calc(var(--space-gutter) / 1);
+  }
+
+  &__heading {
+    grid-row: text-start / text-end;
+    grid-column: content-start / span 2;
+
+    h1 {
+      mix-blend-mode: difference;
+      color: white;
+      max-inline-size: 12ch;
+      text-wrap: balance;
+    }
+  }
+
+  &__text {
+    grid-row: text-start / text-end;
+    grid-column: 4 / content-end;
+  }
+        
+  @include media-query('from', 'desktop') {
+    &__image {
+      img {
+        min-block-size: 540px;
+      }
+    }
+    
+    &__text {
+      h1 {
+        display: none;
+      }
+    }
+  }
+
+  @include media-query('up-to', 'desktop') {
+    --canvas-section-count: 2;
+
+    grid-template-rows: 
+      [image-start white-start] 
+      1fr
+      [text-start] auto [text-end] 
+      1fr
+      [white-end image-end] auto; 
+    
+    &__black {
+      display: none;
+    }
+
+    &__image {
+      grid-column: full-width-start / 3;
+    }
+
+    &__white {
+      grid-column: 3 / full-width-end;
+    }
+
+    &__heading {
+      display: none;
+    }
+
+    &__text {
+      grid-row: text-start / text-end;
+      grid-column: 3 / content-end;
+    }
+  }
+
+  @include media-query('up-to', 'tablet') {
+    --canvas-section-count: 1;
+
+    grid-template-rows: 
+      [full-start black-start image-start white-start] 
+      auto
+      [white-end image-end black-end full-end]
+      auto 
+      [text-start] auto [text-end];
+    
+    & > * {
+      grid-column: content;
+    }
+    
+    &__image {
+      grid-column: full-width;
+
+      img {
+        min-inline-size: 100%;
+      }
+    }
+    
+    &__white {
+      grid-row: text-start / text-end;
+      grid-column: full-width;
+      margin-inline: calc(var(--space-gutter) / -1);
+    }
+
+    &__text {
+      margin-block-start: var(--space-gutter);
+    }
+  }
+}
+</style>

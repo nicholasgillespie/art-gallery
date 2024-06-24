@@ -1,0 +1,38 @@
+---
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+import "../styles/core.scss";
+const { title } = Astro.props;
+const { description } = Astro.props;
+---
+
+<head>
+  <!-- Encoding & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title & Description -->
+  <title>{ title }</title>
+  <meta name="description" content={`${description}`} />
+
+  <!-- Base URL -->
+  <!-- <base href="https://nicholasgillespie.github.io/art-gallery/" /> -->
+  <base href="/art-gallery/" />
+
+  <!-- Canonical link -->
+  <link
+    rel="canonical"
+    href="https://nicholasgillespie.github.io/art-gallery/"
+  />
+
+  <!-- Favicon and Theme Color -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <meta name="theme-color" content="#755cde" />
+
+  <!-- Google Fonts -->
+
+  <!-- Astro Generator Meta Tag -->
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- View Transitions -->
+  <ViewTransitions />
+</head>
