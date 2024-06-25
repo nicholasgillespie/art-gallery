@@ -146,6 +146,10 @@ label {
 // MEDIA ELEMENTS
 
 // IMAGE & SVG ELEMENTS
+svg:not([class]) {
+  inline-size: auto;
+  block-size: 1lh;
+}
 
 // TABLE ELEMENTS
 table {

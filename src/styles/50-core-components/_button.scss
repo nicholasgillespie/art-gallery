@@ -1,26 +1,53 @@
+@use "../10-functions/theme-accessor" as *;
+
 .button {
+  --button-x-padding: 1.2em;
+  --button-y-padding: 1em;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5ch;
+  gap: 0ch;
   position: relative;
-  padding: var(--button-padding, 0.7em 2em);
+  padding: var(--button-padding, 0);
   cursor: pointer;
   text-decoration: none;
   border: var(--button-border, solid var(--border-width, medium) transparent);
-  border-radius: var(--button-radius, 2em);
+  border-radius: var(--button-radius, 0em);
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
-  line-height: var(--line-height-fine);
+  line-height: var(--line-height-flat);
   letter-spacing: inherit;
-  text-transform: capitalize;
-  background-color: var(--button-bg, var(--color-black));
-  color: var(--button-text, var(--color-light-cream));
+  text-transform: uppercase;
+  background-color: var(--button-bg, transparent);
+  color: var(--button-text, get(color, white));
 
   &:hover,
   &:focus-visible {
-    --button-bg: var(--color-galactic-blue);
+    & span {
+      background-color: get(background-color, gold);
+    }
+
+    & svg {
+      background-color: get(background-color, almost-black);
+    }
+  }
+
+  & span {
+    background-color: get(background-color, almost-black);
+    padding: var(--button-y-padding) var(--button-x-padding);
+    padding-inline-end: calc(var(--button-x-padding) * 4);
+  }
+
+  & svg {
+    position: absolute;
+    background-color: get(background-color, gold);
+    inset-inline-end: 0;
+    block-size: 100%;
+    padding: var(--button-y-padding) var(--button-x-padding);
+    // border: var(--button-border, solid var(--border-width, medium) transparent);
+    border-color: transparent;
   }
 
   /* Default variant is primary, so no additional styles needed for it */
