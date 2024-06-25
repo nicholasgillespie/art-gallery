@@ -8,12 +8,21 @@
 }
 
 @font-face {
-  font-family: "Big Shoulders Display";
-  src: url("fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff2")
-      format("woff2"),
-    url("fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff")
-      format("woff");
+  font-family: "Playwrite MX";
+  src: url("fonts/Playwrite_MX/PlaywriteMX-Regular.woff2") format("woff2"),
+    url("fonts/Playwrite_MX/PlaywriteMX-Regular.woff") format("woff");
   font-display: swap;
-  font-weight: 900;
+  font-weight: 100;
   font-style: normal;
 }
+
+// @font-face {
+//   font-family: "Big Shoulders Display";
+//   src: url("fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff2")
+//       format("woff2"),
+//     url("fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff")
+//       format("woff");
+//   font-display: swap;
+//   font-weight: 900;
+//   font-style: normal;
+// }
