@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Outfit";
-  src: url("/fonts/Outfit/Outfit-Light.woff2") format("woff2"),
-    url("/fonts/Outfit/Outfit-Light.woff") format("woff");
+  src: url("fonts/Outfit/Outfit-Light.woff2") format("woff2"),
+    url("fonts/Outfit/Outfit-Light.woff") format("woff");
   font-display: swap;
   font-weight: 100;
   font-style: normal;
@@ -9,9 +9,9 @@
 
 @font-face {
   font-family: "Big Shoulders Display";
-  src: url("/fonts/Big_Shoulders_Display/BigShouldersDisplay-SemiBold.woff2")
+  src: url("fonts/Big_Shoulders_Display/BigShouldersDisplay-SemiBold.woff2")
       format("woff2"),
-    url("/fonts/Big_Shoulders_Display/BigShouldersDisplay-SemiBold.woff")
+    url("fonts/Big_Shoulders_Display/BigShouldersDisplay-SemiBold.woff")
       format("woff");
   font-display: swap;
   font-weight: 600;
@@ -20,9 +20,9 @@
 
 @font-face {
   font-family: "Big Shoulders Display";
-  src: url("/fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff2")
+  src: url("fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff2")
       format("woff2"),
-    url("/fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff")
+    url("fonts/Big_Shoulders_Display/BigShouldersDisplay-Black.woff")
       format("woff");
   font-display: swap;
   font-weight: 900;

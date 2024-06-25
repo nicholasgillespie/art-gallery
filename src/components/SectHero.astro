@@ -47,8 +47,6 @@ import CompButton from "./CompButton.astro";
 @import '../styles/20-mixins/media-query.scss';
 
 .hero {
-  --space-flow: 1.5em;
-
   grid-template-rows: 
       [full-start black-start image-start white-start] 
       1fr
@@ -91,7 +89,7 @@ import CompButton from "./CompButton.astro";
       max-inline-size: 12ch;
       text-wrap: balance;
       display: block;
-      font-size: var(--font-size-5);
+      font-size: var(--font-size-accent);
       font-family: var(--font-family-display);
       font-weight: var(--font-weight-black);
       line-height: var(--line-height-flat);
@@ -102,6 +100,10 @@ import CompButton from "./CompButton.astro";
   &__text {
     grid-row: text-start / text-end;
     grid-column: 4 / content-end;
+   
+    :global(.button) {
+      --space-flow: 3em;
+    }
   }
         
   @include media-query('from', 'desktop') {
