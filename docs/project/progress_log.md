@@ -30,6 +30,7 @@
   <!-- - Defined the project [design tokens](https://github.com/nicholasgillespie/body-mass/tree/main/src/styles/00-settings). -->
 - Correct accessibility issue, redundant h1 element.
 - Change file png format to jpg for display layout images.
+- Ensure all reusable components / files use the scss get function (button, skiplink, etc.).
 
 ---
 

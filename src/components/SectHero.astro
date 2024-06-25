@@ -34,7 +34,7 @@ import CompButton from "./CompButton.astro";
   </div>
   <div class="hero__white"></div>
   <div class="hero__heading">
-    <h1>modern art gallery</h1>
+    <span>modern art gallery</span>
   </div>
   <div class="hero__text | l-flow">
     <h1>modern <br>art gallery</h1>
@@ -55,7 +55,7 @@ import CompButton from "./CompButton.astro";
       [white-end image-end black-end full-end] auto; 
 
   &__black {
-    background-color: black;
+    background-color: var(--color-almost-black);
     grid-row: black-start / black-end;
     grid-column: full-width-start / span 2;
     margin-inline-end: calc(var(--space-gutter) / 1);
@@ -73,7 +73,7 @@ import CompButton from "./CompButton.astro";
   }
 
   &__white {
-    background-color: white;
+    background-color: var(--color-white);
     grid-row: white-start / white-end;
     grid-column: span 2 / full-width-end;
     margin-inline-start: calc(var(--space-gutter) / 1);
@@ -83,11 +83,17 @@ import CompButton from "./CompButton.astro";
     grid-row: text-start / text-end;
     grid-column: content-start / span 2;
 
-    h1 {
+    span {
       mix-blend-mode: difference;
-      color: white;
+      color: var(--color-white);
       max-inline-size: 12ch;
       text-wrap: balance;
+      display: block;
+      font-size: var(--font-size-5);
+      font-family: var(--font-family-display);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-flat);
+      text-transform: uppercase;
     }
   }
 

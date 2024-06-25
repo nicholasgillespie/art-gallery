@@ -11,9 +11,9 @@
 
 // GLOBAL SETTINGS ////////////////////
 body {
-  accent-color: get(color, galactic-blue);
-  background: get(color, light-cream);
-  color: get(color, medium-brown);
+  accent-color: get(color, gold);
+  background: get(color, white);
+  color: get(color, almost-black);
   font-family: get(font-family, base);
   font-size: get(font-size, base);
   font-weight: get(font-weight, base);
@@ -38,33 +38,32 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: get(font-family, base);
-  // font-weight: get(font-weight, thin);
-  line-height: get(line-height, fine);
-  color: get(color, black);
+  font-family: get(font-family, display);
+  font-weight: get(font-weight, black);
+  line-height: get(line-height, flat);
+  color: get(color, almost-black);
   text-transform: uppercase;
-  // text-wrap: balance;
+  text-wrap: balance;
   hyphens: auto;
 }
 
 h1 {
-  font-size: get(font-size, 4);
+  font-size: get(font-size, 5);
   max-inline-size: 25ch;
 }
 
 h2 {
-  font-size: get(font-size, 3);
+  font-size: get(font-size, 4);
 }
 
 h3 {
-  font-size: get(font-size, 1);
-  font-weight: get(font-weight, base);
+  font-size: get(font-size, 3);
 }
 
 h4,
 h5,
 h6 {
-  font-size: get(font-size, 1);
+  font-size: get(font-size, 2);
 }
 
 @supports not (font-size-adjust: from-font) {
@@ -121,7 +120,7 @@ b {
 
 input,
 label {
-  line-height: get(line-height, fine);
+  line-height: get(line-height, flat);
 }
 
 // label::after {
