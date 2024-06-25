@@ -27,9 +27,27 @@
 #### TODO
 
 - Define project design tokens.
-  <!-- - Defined the project [design tokens](https://github.com/nicholasgillespie/body-mass/tree/main/src/styles/00-settings). -->
 - Correct accessibility issue, redundant h1 element.
 - Change file png format to jpg for display layout images.
+
+## 2024-06-25 - Afternoon
+
+### Accessibility and File Format Adjustments
+
+- Corrected the accessibility issue with redundant `h1` elements.
+- Changed image files from PNG format to JPG to improve load times and consistency.
+
+### Design Tokens
+
+- Defined most of the project [design tokens](https://github.com/nicholasgillespie/body-mass/tree/main/src/styles/00-settings). Remaining tasks include updating the font-size design token.
+
+### Head Section Development
+
+- Continued work on the head section, implementing an accessible button with an arrow that supports contrast theme adjustments.
+
+#### TODO
+
+- Update the font-size design token to ensure consistency across all components.
 - Ensure all reusable components / files use the scss get function (button, skiplink, etc.).
 
 ---

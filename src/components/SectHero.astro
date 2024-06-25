@@ -47,6 +47,8 @@ import CompButton from "./CompButton.astro";
 @import '../styles/20-mixins/media-query.scss';
 
 .hero {
+  --space-flow: 1.5em;
+
   grid-template-rows: 
       [full-start black-start image-start white-start] 
       1fr
@@ -112,6 +114,10 @@ import CompButton from "./CompButton.astro";
     &__text {
       h1 {
         display: none;
+      }
+
+      p {
+        margin-block-start: 0;
       }
     }
   }
