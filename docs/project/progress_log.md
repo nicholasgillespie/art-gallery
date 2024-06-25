@@ -49,6 +49,7 @@
 
 - Update the font-size design token to ensure consistency across all components.
 - Ensure all reusable components / files use the scss get function (button, skiplink, etc.).
+- Implement Gallery section. Use [grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas).
 
 ---
 
