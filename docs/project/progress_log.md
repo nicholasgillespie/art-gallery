@@ -51,6 +51,20 @@
 - Ensure all reusable components / files use the scss get function (button, skiplink, etc.).
 - Implement Gallery section. Use [grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas).
 
+## 2024-07-02 - Morning
+
+### Gallery Section
+
+- Completed the Gallery section using `grid-template-areas`.
+
+### Footer Section
+
+- Completed the Footer section.
+
+#### TODO
+
+- Begin development on additional page (Contact).
+
 ---
 
 ## [Date] - [Session]

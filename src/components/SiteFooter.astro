@@ -1,15 +1,34 @@
 ---
 import CompLogoLink from "./CompLogoLink.astro";
+import CompSocialIcons from "./CompSocialIcons.astro";
 ---
 
 <footer class="site-footer">
   <div class="l-wrapper l-region">
-    <CompLogoLink />
+    <div class="l-repel">
+      <div class="l-cluster">
+        <CompLogoLink />
+        <p>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
+      </div>
+      <CompSocialIcons />
+    </div>
   </div>
 </footer>
 
 <style lang="scss">
+  @use "../styles/10-functions/theme-accessor" as *;
+  
   .site-footer {
-    background-color: black;
+    --repel-vertical-alignment: flex-start;
+    --cluster-vertical-alignment: flex-start;
+    --space-repel: #{get(space, l)} #{get(space, 3xl)};
+    --space-cluster: #{get(space, l)} #{get(space, 3xl)};
+
+    background-color: get(color, almost-black);
+    color: get(color, white);
+    
+    p {
+      max-inline-size: 37ch;
+    }
   }
 </style>

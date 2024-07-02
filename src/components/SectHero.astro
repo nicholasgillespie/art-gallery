@@ -110,6 +110,7 @@ import CompButton from "./CompButton.astro";
     &__image {
       img {
         min-block-size: 540px;
+        block-size: min(100vh, 925px);
       }
     }
     
@@ -186,6 +187,10 @@ import CompButton from "./CompButton.astro";
 
     &__text {
       margin-block-start: var(--space-gutter);
+   
+      :global(.button) {
+        --space-flow: 1em;
+      }
     }
   }
 }

@@ -8,6 +8,9 @@
 </a>
 
 <style lang="scss">
+  @use "../styles/10-functions/theme-accessor" as *;
+
   .site-logo {
+    block-size: get(font-size, 4);
   }
 </style>

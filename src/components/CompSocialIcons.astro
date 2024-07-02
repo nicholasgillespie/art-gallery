@@ -1,0 +1,28 @@
+---
+
+---
+
+<div class="social-icons | l-cluster">
+  <a href="">
+    <img src="images/icon-facebook.svg" alt="facebook" draggable="false" />
+  </a>
+  <a href="">
+    <img src="images/icon-instagram.svg" alt="instagram" draggable="false" />
+  </a>
+  <a href="">
+    <img src="images/icon-twitter.svg" alt="twitter" draggable="false" />
+  </a>
+</div>
+
+<style lang="scss">
+  @use "../styles/10-functions/theme-accessor" as *;
+
+  .social-icons {
+    --space-cluster: #{get(space, s)};
+
+    img {
+      block-size: get(font-size, base);
+      inline-size: get(font-size, base);
+    }
+  }
+</style>
