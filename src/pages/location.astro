@@ -1,23 +1,68 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-import CompSkipLink from "../components/CompSkipLink.astro";
-const title = "Location"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CompButton from "../components/CompButton.astro";
+// import CompButton from "./CompButton.astro";
+
+const title = "Location";
+const description = "XXX";
+const footerVariant = "secondary";
 ---
 
-<BaseLayout title={title}>
-  <section class="solutions | l-wrapper l-region" aria-labelledby="label_solutions">
-    <div class="solutions__content | l-flow l-center" data-center="child-elements">
-      <h1 id="label_solutions">Design solutions made easy</h1>
-      <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
-    </div>
+<BaseLayout title={title} description={ description} footerVariant={footerVariant}>
+	<section class="return | l-wrapper">
+		<CompButton href="/" text="back to Home" variant="secondary" />
+	</section>
+  <section class="solutions | l-wrapper l-region" data-wrapper="full-width"  aria-labelledby="label_solutions">
 
-    <div class="solutions__disciplines" aria-labelledby="label_disciplines">
-      <h2 id="label_disciplines" class="u-vh">Design disciplines</h2>
-      <CompSkipLink targetId="about" />
-    </div>
+		<p>map</p>
+		
   </section>
+	<section class="location">
+		<div class="l-region l-wrapper l-switcher">
+			<h2>our<br>location</h2>
+			<div class="l-flow">
+				<h3>99 king street</h3>
+				<p>Newport<br>
+					RI 02840<br>
+					United States of America</p>
+				<p>Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm.</p>
+			</div>
+		</div>
+	</section>
 </BaseLayout>
 
 <style lang="scss">
-  @import '../styles/20-mixins/media-query.scss';
+	@use "../styles/10-functions/theme-accessor" as *;
+
+	.return {
+		position: absolute;
+		z-index: 1;
+	}
+
+  .solutions {
+		min-block-size: 540px;
+		block-size: min(100vh, 925px);
+
+		* {
+			outline: solid 1px red;
+		}
+  }
+
+	.location {
+		background-color: get(background-color, almost-black);
+		color: get(color, white);
+		// block-size: 100%;
+
+		h2 {
+			color: get(color, white);
+		}
+
+		h3 {
+			color: get(color, gold);
+		}
+
+		p {
+			max-inline-size: 37ch;
+		}
+	}
 </style>

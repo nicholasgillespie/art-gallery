@@ -1,16 +1,18 @@
 ---
 import CompLogoLink from "./CompLogoLink.astro";
 import CompSocialIcons from "./CompSocialIcons.astro";
+
+const { footerVariant = "primary" } = Astro.props;
 ---
 
-<footer class="site-footer">
+<footer class="site-footer" data-footer-variant={footerVariant}>
   <div class="l-wrapper l-region">
     <div class="l-repel">
       <div class="l-cluster">
-        <CompLogoLink />
+        <CompLogoLink footerVariant={footerVariant} />
         <p>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
       </div>
-      <CompSocialIcons />
+      <CompSocialIcons footerVariant={footerVariant} />
     </div>
   </div>
 </footer>
@@ -24,8 +26,13 @@ import CompSocialIcons from "./CompSocialIcons.astro";
     --space-repel: #{get(space, l)} #{get(space, 3xl)};
     --space-cluster: #{get(space, l)} #{get(space, 3xl)};
 
-    background-color: get(color, almost-black);
-    color: get(color, white);
+      background-color: var(--color-almost-black);
+      color: white;
+
+    &[data-footer-variant="secondary"] {
+      background-color: get(background-color, gold);
+      color: get(background-color, almost-black);
+    }
     
     p {
       max-inline-size: 37ch;

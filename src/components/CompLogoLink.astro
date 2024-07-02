@@ -1,9 +1,10 @@
 ---
-
+// Import the necessary script
+const { footerVariant } = Astro.props;
 ---
 
 <a href="">
-  <img class="site-logo" src="images/logo-light.svg" alt="" draggable="false"/>
+  <img class="site-logo" src={`images/logo-${footerVariant === "secondary" ? "dark" : "light"}.svg`} alt="" draggable="false"/>
   <span class="u-vh">Go to Modern Art Gallery homepage</span>
 </a>
 

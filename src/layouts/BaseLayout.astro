@@ -4,6 +4,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 const { title } = Astro.props;
 const { description } = Astro.props;
+const { footerVariant } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,6 +14,6 @@ const { description } = Astro.props;
     <main id="main">
       <slot />
     </main>
-    <SiteFooter />
+    <SiteFooter footerVariant={footerVariant}/>
 	</body>
 </html>
