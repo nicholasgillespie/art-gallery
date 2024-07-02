@@ -6,5 +6,4 @@ export default defineConfig({
   integrations: [purgecss()],
   site: "https://nicholasgillespie.github.io",
   base: "/art-gallery/",
-  trailingSlash: "never",
 });
