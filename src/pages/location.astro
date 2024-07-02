@@ -9,14 +9,16 @@ const footerVariant = "secondary";
 ---
 
 <BaseLayout title={title} description={ description} footerVariant={footerVariant}>
-	<section class="return | l-wrapper">
-		<CompButton href="/" text="back to Home" variant="secondary" />
+	<section class="return">
+		<div class="l-wrapper">
+			<CompButton href="" text="back to Home" variant="secondary" />
+		</div>
 	</section>
-  <section class="solutions | l-wrapper l-region" data-wrapper="full-width"  aria-labelledby="label_solutions">
 
+  <section class="solutions | l-wrapper l-region" data-wrapper="full-width"  aria-labelledby="label_solutions">
 		<p>map</p>
-		
   </section>
+
 	<section class="location">
 		<div class="l-region l-wrapper l-switcher">
 			<h2>our<br>location</h2>
@@ -35,18 +37,19 @@ const footerVariant = "secondary";
 	@use "../styles/10-functions/theme-accessor" as *;
 
 	.return {
-		position: sticky;
-		margin-inline: auto;
+		position: absolute;
+		inline-size: 100%;
 		z-index: 1;
+
+    :global(.button) {
+      margin-block-start: calc(var(--border-width) * -1);
+    }
 	}
 
   .solutions {
 		min-block-size: 540px;
 		block-size: min(100vh, 925px);
-
-		* {
-			outline: solid 1px red;
-		}
+		background-color: lightcyan;
   }
 
 	.location {
