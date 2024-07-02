@@ -65,6 +65,21 @@
 
 - Begin development on additional page (Contact).
 
+## 2024-07-02 - Afternoon
+
+### Dynamic Footer Implementation
+
+- Created a dynamic footer that adapts its style based on a defined property variant.
+
+### Contact / Location Page Development
+
+- Initiated the development of the Contact / Location page.
+- Structured the page layout and included essential information about visiting hours and location.
+
+#### TODO
+
+- Insert an interactive map on the Contact / Location page.
+
 ---
 
 ## [Date] - [Session]
