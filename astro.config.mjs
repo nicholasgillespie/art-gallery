@@ -4,7 +4,7 @@ import purgecss from "astro-purgecss";
 // https://astro.build/config
 export default defineConfig({
   integrations: [purgecss()],
-  site: "https://nicholasgillespie.github.io",
-  base: "/art-gallery/",
-  trailingSlash: "never",
+  site: "https://nicholasgillespie.github.io/art-gallery/",
+  // base: "/art-gallery/",
+  // trailingSlash: "never",
 });
