@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CompButton from "../components/CompButton.astro";
+import LeafletMap from "../components/LeafletMap.astro";
 
 const title = "Location";
 const description = "Explore the Modern Art Gallery, a sanctuary of inspiration and creativity. Discover our diverse collections, learn about the artists' creative processes, and find new insights. Open daily, free for all. Visit us at 99 King Street, Newport, USA.";
@@ -14,8 +15,8 @@ const footerVariant = "secondary";
 		</div>
 	</section>
 
-  <section class="solutions | l-wrapper l-region" data-wrapper="full-width"  aria-labelledby="label_solutions">
-		<p>map</p>
+  <section class="map">
+		<LeafletMap />
   </section>
 
 	<section class="location">
@@ -38,17 +39,16 @@ const footerVariant = "secondary";
 	.return {
 		position: absolute;
 		inline-size: 100%;
-		z-index: 1;
+		z-index: 999;
 
     :global(.button) {
       margin-block-start: calc(var(--border-width) * -1);
     }
 	}
 
-  .solutions {
+  .map {
 		min-block-size: 540px;
-		block-size: min(100vh, 925px);
-		background-color: lightcyan;
+		// block-size: min(100vh, 925px);
   }
 
 	.location {
