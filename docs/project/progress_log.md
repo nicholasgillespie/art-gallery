@@ -1,5 +1,9 @@
 # Progress Log
 
+## Project Duration
+
+The Portfolio Design project was actively developed over a period of 4 days, starting on June 24, 2024, and concluding on July 3, 2024.
+
 ## 2024-06-24 - Morning
 
 ### Project Setup
@@ -79,6 +83,12 @@
 #### TODO
 
 - Insert an interactive map on the Contact / Location page.
+
+## 2024-07-03 - Morning
+
+### Interactive Map Integration
+
+- Integrated an interactive map into the Contact / Location page.
 
 ---
 
